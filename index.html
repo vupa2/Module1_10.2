@@ -13,13 +13,15 @@
 
   <script>
     // Bai 1
-    let num = prompt("Enter a number: -1");
+    let num = 0;
     let total = 0;
-    while( num != -1 ) {
-      num = prompt("Enter a number: ");
-      alert(num);
-      //phần code tính tổng
+    while(num != -1 ) {
+      num = parseFloat(prompt("Enter a number: "));
+      while (isNaN(num)) {
+      	num = parseFloat(prompt("Enter a number: "));
+      }
       total += num;
+      alert(total);
     }
 
     // Bai 2
